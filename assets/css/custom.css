@@ -31,7 +31,7 @@
 	max-height: 500px;
     overflow-y: auto;
 }
-#hospedajes-list .list-group .list-group-item{
+#hospedajes-list .list-group .item-hospedaje{
 	padding: 25px;
 }
 .footer {

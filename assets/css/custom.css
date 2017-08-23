@@ -1,0 +1,69 @@
+.navbar .navbar-brand {
+	color: rgba(255, 255, 255, .85);
+	font-size: 1rem;
+	padding-top: .45rem;
+}
+
+.btn,
+.active {
+	transition: .4s;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 120px;
+}
+
+#api-turismo, #hospedajes-list{
+	text-align: center !important;
+}
+
+#api-turismo img, #hospedajes-list img {
+	width: auto;
+}
+
+#hospedajes-list {
+	margin-top: 50px;
+}
+
+#hospedajes-list .list-group {
+	color: #0275d8;
+	max-height: 500px;
+    overflow-y: auto;
+}
+#hospedajes-list .list-group .list-group-item{
+	padding: 25px;
+}
+.footer {
+	margin-top: 400px;
+	border-top: solid 1px darkgrey;
+}
+
+.footer .text-md-right {
+	padding: 10px;
+}
+
+.btn-group-custom {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.btn-consulta-hospedaje, .btn-limpiar {
+	cursor: pointer;
+	margin-left:5px !important;
+}
+
+.loadingDiv {
+	display: none;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.66);
+}
+
+.sin-datos {
+	color: rgba(255, 0, 0, 0.71) !important;
+}
+
+.span-domicilio {
+	color: orange;
+}
+

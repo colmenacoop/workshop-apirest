@@ -1,15 +1,14 @@
 $(document).ready(function() {
 
     // INIT VARS
-    var lista = $('#hospedajes-list .list-group');
-    var items = $('#hospedajes-list .list-group a');
+    var $lista = $('#hospedajes-list .list-group');
 
     // FUNCTIONS
     function limpiarLista(clear) {
         if (clear){
-            lista.html("");
+            $lista.html("");
         }else{
-            lista.html("<a class='list-group-item sin-datos'><strong>No hay datos</strong></a>");
+            $lista.html("<a class='list-group-item sin-datos'><strong>No hay datos</strong></a>");
         }
     }
 
@@ -21,7 +20,7 @@ $(document).ready(function() {
             success: function(result) {
                 limpiarLista(true);
                 $.each(result, function(i, item){
-                    lista.append("<a class='list-group-item item-hospedaje'><strong>" + item.nombre + ", <span class='span-domicilio'>" + item.domicilio + "</span></strong></a>");
+                    $lista.append("<a class='list-group-item item-hospedaje'><strong>" + item.nombre + ", <span class='span-domicilio'>" + item.domicilio + "</span></strong></a>");
                 })
             },
             error: function(result){

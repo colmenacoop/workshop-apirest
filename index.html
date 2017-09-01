@@ -9,8 +9,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap-4/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
-	<!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="assets/swipe/dist/css/swiper.min.css">
+
 </head>
 
 <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -82,7 +81,24 @@
 					<button class="btn-consulta-hospedaje btn btn-success">Consultar</button>
 					<button class="btn-limpiar btn btn-danger">Limpiar</button>
 				</div>
-				<div class="loadingDiv">LOADING...</div>
+				<div class="loadingDiv">CARGANDO...</div>
+			</div>
+		</div>
+		<br>
+		<div id="hospedajes-form" class="row">
+			<div class="offset-md-3 col-md-6 offset-md-3">
+				<h1>FORMULARIO</h1>
+				<form class="form-inline" id="form">
+					<label class="sr-only" for="nombre">Nombre</label>
+					<input type="text" class="form-control form-control mb-2 mr-sm-2 mb-sm-0" id="nombre" placeholder="Nombre">
+
+					<label class="sr-only" for="apellido">Apellido</label>
+					<input type="text" class="form-control form-control mb-2 mr-sm-2 mb-sm-0" id="apellido" placeholder="Apellido">
+
+					<button type="submit" class="btn btn-primary">Crear</button>
+
+					<div class="loadingDivForm">CARGANDO...</div>
+				</form>
 			</div>
 		</div>
 		

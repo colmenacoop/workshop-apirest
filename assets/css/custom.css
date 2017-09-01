@@ -59,11 +59,28 @@
 	color: rgba(0, 0, 0, 0.66);
 }
 
+.loadingDivForm {
+	display: none;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.66);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:10px;
+}
+
 .sin-datos {
 	color: rgba(255, 0, 0, 0.71) !important;
 }
 
 .span-domicilio {
 	color: orange;
+}
+
+#hospedajes-form {
+	text-align: center !important;
+}
+
+#hospedajes-form form {
+	margin-top: 20px;
 }
 

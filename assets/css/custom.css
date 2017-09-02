@@ -1,3 +1,11 @@
+body {
+	margin: 0;
+}
+
+.main {
+	min-height: 600px;
+}
+
 .navbar .navbar-brand {
 	color: rgba(255, 255, 255, .85);
 	font-size: 1rem;
@@ -14,33 +22,43 @@
 	height: 120px;
 }
 
-#api-turismo, #hospedajes-list{
+#about-api, #list-div {
 	text-align: center !important;
 }
 
-#api-turismo img, #hospedajes-list img {
+#about-api img, #list-div img {
 	width: auto;
 }
 
-#hospedajes-list {
+#about-api .list-group-item {
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#list-div {
 	margin-top: 50px;
 }
 
-#hospedajes-list .list-group {
+#list-div .list-group {
 	color: #0275d8;
 	max-height: 500px;
     overflow-y: auto;
 }
-#hospedajes-list .list-group .item-hospedaje{
+#list-div .list-group .item{
 	padding: 25px;
 }
+
 .footer {
-	margin-top: 400px;
-	border-top: solid 1px darkgrey;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	text-align: right;
 }
 
-.footer .text-md-right {
+.footer small {
 	padding: 10px;
+    font-family: monospace;
+    font-size: 12px;
 }
 
 .btn-group-custom {
@@ -48,18 +66,33 @@
 	margin-bottom: 20px;
 }
 
-.btn-consulta-hospedaje, .btn-limpiar {
+.btn-consulta, .btn-limpiar, .btn-crear {
 	cursor: pointer;
-	margin-left:5px !important;
 }
 
-.loadingDiv {
+.btn-editar, .btn-eliminar {
+	background: none;
+}
+
+.btn-editar {
+	position: absolute !important;
+    right: 0 !important;
+    margin-right: 80px !important;
+}
+
+.btn-eliminar {
+	position: absolute !important;
+    right: 0 !important;
+    margin-right: 5px !important;
+}
+
+.loadingList {
 	display: none;
 	font-weight: bold;
 	color: rgba(0, 0, 0, 0.66);
 }
 
-.loadingDivForm {
+.loadingForm {
 	display: none;
 	font-weight: bold;
 	color: rgba(0, 0, 0, 0.66);
@@ -70,17 +103,31 @@
 
 .sin-datos {
 	color: rgba(255, 0, 0, 0.71) !important;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.span-domicilio {
-	color: orange;
+.span-lastname {
+	
 }
 
-#hospedajes-form {
+.span-dni {
+	color: deeppink;
+}
+
+#form-div {
 	text-align: center !important;
 }
 
-#hospedajes-form form {
+#form-div form {
 	margin-top: 20px;
 }
 
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
+
+.btn-editar-confirmar {
+	display: none;
+}

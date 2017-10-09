@@ -20,7 +20,7 @@ $(document).ready(function() {
         if (!text){
             $list.html("");
         }else{
-            $list.html("<a class='list-group-item sin-datos'><strong>" + text + "</strong></a>");
+            $list.html("<a class='list-group-item sin-datos'><strong>" +    wxt + "</strong></a>");
         }
     }
 
@@ -54,15 +54,52 @@ $(document).ready(function() {
     function getResource() {
         // AJAX GET METHOD
         console.log('Inserte su metodo metodo AJAX GET aquí');
+        $.ajax({
+            method: 'GET',
+            url: 'http://localhost:8000/api/v1/asistente/',
+            beforeSend: function(){
+                $loadingList.show();
+            },
+            success: function(data, status, xho){
+                $.each(data, function(i, element){
+                    addItem(element);
+                })
+                console.log(xho);
+                console.log(data);
+            },
+            error: function(data){
+                console.log(data)
+            }
+        }).always(function(){
+            $loadingList.hide()
+        })
     }
 
     function postResource() {
         // DATA AND LOG
-        var datos = {nombre: $inputName.val(), apellido: $inputLastname.val(), dni: $inputDNI.val()};
+        var datos = {apellido: $inputLastname.val(), dni: $inputDNI.val()};
         console.log(datos);
 
         // AJAX POST METHOD
-        console.log('Inserte su metodo metodo AJAX POST aquí');
+        $.ajax({
+            method: 'POST',
+            url: 'http://localhost:8000/api/v1/asistente/',
+            data: datos,
+            beforeSend: function(){
+                $loadingList.show();
+            },
+            success: function(data, status, xho){
+                addItem(data);
+                console.log(xho);
+                console.log(data);
+            },
+            error: function(data){
+                console.log(data)
+            }
+        }).always(function(){
+            $loadingList.hide()
+        })
+
     }
 
     function putResource() {
@@ -72,7 +109,24 @@ $(document).ready(function() {
         console.log(datos);
 
         // AJAX PUT METHOD
-        console.log('Inserte su metodo metodo AJAX PUT aquí');
+        $.ajax({
+            method: 'PUT',
+            url: 'http://localhost:8000/api/v1/asistente/' + resourceID + '/',
+            data: datos,
+            beforeSend: function(){
+                $loadingList.show();
+            },
+            success: function(data, status, xho){
+                updateItem(data);
+                console.log(xho);
+                console.log(data);
+            },
+            error: function(data){
+                console.log(data)
+            }
+        }).always(function(){
+            $loadingList.hide()
+        })
     }
 
     function deleteResource() {
@@ -80,7 +134,23 @@ $(document).ready(function() {
         console.log('Se eliminara el recurso con ID: ' + resourceID);
 
         // AJAX DELETE METHOD
-        console.log('Inserte su metodo metodo AJAX DELETE aquí');
+        $.ajax({
+            method: 'DELETE',
+            url: 'http://localhost:8000/api/v1/asistente/' + resourceID + '/',
+            beforeSend: function(){
+                $loadingList.show();
+            },
+            success: function(data, status, xho){
+                removeItem(data);
+                console.log(xho);
+                console.log(data);
+            },
+            error: function(data){
+                console.log(data)
+            }
+        }).always(function(){
+            $loadingList.hide()
+        })
     }
 
 
